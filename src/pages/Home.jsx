@@ -11,8 +11,8 @@ function Home({ items }) {
       </div>
       <h2 className="content__title">All Pizzas</h2>
       <div className="content__items">
-        {items.map((item) => (
-          <PizzaBlock key={item.id} name={item.name} pic={item.imageUrl} />
+        {items.map((obj) => (
+          <PizzaBlock key={obj.id} {...obj} />
         ))}
       </div>
     </div>
