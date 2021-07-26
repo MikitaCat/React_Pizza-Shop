@@ -7,7 +7,13 @@ function Home({ items }) {
     <div className="container">
       <div className="content__top">
         <Categories items={['Meat', 'Vegeterian', 'Grill', 'Hot', 'Closed']} />
-        <SortPopup items={['popularity', 'cost', 'alphabeth']} />
+        <SortPopup
+          items={[
+            { name: 'popularity', type: 'popular' },
+            { name: 'cost', type: 'price' },
+            { name: 'alphabeth', type: 'alphabeth' },
+          ]}
+        />
       </div>
       <h2 className="content__title">All Pizzas</h2>
       <div className="content__items">
