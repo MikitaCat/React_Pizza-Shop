@@ -1,7 +1,6 @@
 import React from 'react';
 import { Categories, SortPopup, PizzaBlock } from '../components';
 import { useSelector } from 'react-redux';
-import pizzas from '../redux/reducers/pizzas';
 
 function Home() {
   const { items } = useSelector(({ pizzas }) => {

@@ -13,8 +13,9 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:3000/db.json').then(({ data }) => {
       dispatch(setPizzas(data.pizzas));
+      console.log(data.pizzas);
     });
-  }, []);
+  }, [dispatch]);
   return (
     <div className="wrapper">
       <Header />
