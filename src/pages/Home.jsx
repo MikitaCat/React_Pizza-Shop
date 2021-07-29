@@ -3,18 +3,15 @@ import { Categories, SortPopup, PizzaBlock } from '../components';
 import { useSelector } from 'react-redux';
 
 function Home() {
-  const { items } = useSelector(({ pizzas }) => {
-    return {
-      items: pizzas.items,
-    };
-  });
-
-  console.log(items);
+  const items = useSelector(({ pizzas }) => pizzas.items);
 
   return (
     <div className="container">
       <div className="content__top">
-        <Categories items={['Meat', 'Vegeterian', 'Grill', 'Hot', 'Closed']} />
+        <Categories
+          onClickItem={() => console.log('HI')}
+          items={['Meat', 'Vegeterian', 'Grill', 'Hot', 'Closed']}
+        />
         <SortPopup
           items={[
             { name: 'popularity', type: 'popular' },
