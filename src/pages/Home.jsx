@@ -14,9 +14,12 @@ function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({ pizzas }) => pizzas.items);
 
-  const onSelectCategory = useCallback((index) => {
-    dispatch(setCategory(index));
-  }, []);
+  const onSelectCategory = useCallback(
+    (index) => {
+      dispatch(setCategory(index));
+    },
+    [dispatch],
+  );
 
   return (
     <div className="container">
