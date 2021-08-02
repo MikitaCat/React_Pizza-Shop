@@ -1,6 +1,5 @@
 import React from 'react';
 import { memo } from 'react';
-import { useState } from 'react';
 
 const Categories = memo(function Categories({ activeCategory, items, onClickItem }) {
   return (
