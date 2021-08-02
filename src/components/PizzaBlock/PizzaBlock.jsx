@@ -25,7 +25,7 @@ function PizzaBlock({ name, imageUrl, price, types, sizes }) {
           {availableTypes.map((type, index) => {
             return (
               <li
-                key={types}
+                key={index}
                 onClick={() => onSelectType(index)}
                 className={classNames({
                   active: activeType === index,
@@ -79,7 +79,7 @@ PizzaBlock.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   types: PropTypes.arrayOf(PropTypes.number).isRequired,
-  syzes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default PizzaBlock;
